@@ -58,5 +58,30 @@
         <url-pattern>/js/*</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>cssAggregation</servlet-name>
+        <servlet-class>com.rsqn.utils.jjst.servlets.CssAggregationServlet</servlet-class>
+        <async-supported>false</async-supported>
+        <init-param>
+            <param-name>baseProfiles</param-name>
+            <param-value>nocache,nocompile</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cssAggregation</servlet-name>
+        <url-pattern>/css/*</url-pattern>
+    </servlet-mapping>
+
+    <!--<servlet>-->
+        <!--<servlet-name>jsSource</servlet-name>-->
+        <!--<servlet-class>com.rsqn.utils.jjst.servlets.JavascriptSourceServlet</servlet-class>-->
+        <!--<async-supported>false</async-supported>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>jsSource</servlet-name>-->
+        <!--<url-pattern>/source/*</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+
 
 </web-app>
