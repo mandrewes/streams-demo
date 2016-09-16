@@ -6,7 +6,9 @@
 
 <body>
 <div class="mainApp">
-<div class="echo-container"></div>
+    <div class="echo-container">
+        blah - check the console
+    </div>
 </div>
 </body>
 </html>
