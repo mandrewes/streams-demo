@@ -39,7 +39,16 @@ com.rsqn.streams.Stream.prototype.batch = function (fn) {
 
 
 com.rsqn.streams.Stream.prototype.subscribe = function (channel, cb, subCb) {
+    var self = this;
     console.log("subscribe on (" + channel + ")");
+
+    if (self._connectionEstablishedFlag === false) {
+        setTimeout(function () {
+            self.subscribe(channel, cb, subCb);
+        }, 1000);
+        console.log("Connection not ready, retrying");
+        return;
+    }
     // channel, scope, callback, subscribeProps, subscribeCallback
     this.cometd.subscribe(channel, null, function (message) {
             try {

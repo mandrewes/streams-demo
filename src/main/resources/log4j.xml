@@ -9,6 +9,10 @@
         </layout>
     </appender>
 
+    <logger name="com.rsqn">
+        <level value="DEBUG" />
+    </logger>
+
     <root>
         <priority value="info"/>
         <appender-ref ref="console"/>

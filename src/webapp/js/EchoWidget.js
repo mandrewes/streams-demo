@@ -20,12 +20,13 @@ com.rsqn.streamsdemo.EchoWidget.prototype.init = function (stream, parentElement
 
         self.stream.publish("/service/sample/multi-echo", {
                 returnChannel: "/service/sample/echo-response",
-                count: 1000,
-                rateMs: 5
+                count: 100,
+                rateMs: 1000
             }
         );
     };
-
-    self.echoSubscription = self.stream.subscribe("/service/sample/echo-response", echoListener, onSubscribeListener);
+    setTimeout(function() {
+        self.echoSubscription = self.stream.subscribe("/service/sample/echo-response", echoListener, onSubscribeListener);
+    }, 1);
 
 };

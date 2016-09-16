@@ -28,9 +28,7 @@ com.rsqn.streamsdemo.StreamApp.prototype.init = function (parentElement) {
         }
     });
 
-
-    var url = location.protocol + "//" + location.host + "/cometd";
-    self.stream.init(url,self.credentials);
+    self.stream.init(_streamConfig.url,self.credentials);
 
     var div = self.myElement.find(".echo-container");
     new com.rsqn.streamsdemo.EchoWidget().init(self.stream,div);

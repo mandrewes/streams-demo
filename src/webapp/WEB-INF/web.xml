@@ -32,14 +32,15 @@
         <servlet-name>cometd</servlet-name>
         <url-pattern>/cometd/*</url-pattern>
     </servlet-mapping>
+
     <!--<filter>-->
-    <!--<filter-name>cross-origin</filter-name>-->
-    <!--<filter-class>org.eclipse.jetty.servlets.CrossOriginFilter</filter-class>-->
-    <!--<async-supported>true</async-supported>-->
+        <!--<filter-name>cross-origin</filter-name>-->
+        <!--<filter-class>com.rsqn.utils.jjst.filters.DevOnlyCORSFilter</filter-class>-->
+        <!--<async-supported>true</async-supported>-->
     <!--</filter>-->
     <!--<filter-mapping>-->
-    <!--<filter-name>cross-origin</filter-name>-->
-    <!--<url-pattern>/cometd/*</url-pattern>-->
+        <!--<filter-name>cross-origin</filter-name>-->
+        <!--<url-pattern>*</url-pattern>-->
     <!--</filter-mapping>-->
 
 
