@@ -2,57 +2,62 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.rsqn.streams</groupId>
+    <parent>
+        <groupId>tech.rsqn</groupId>
+        <artifactId>rsqn-oss-super-pom</artifactId>
+        <version>0.0.4</version>
+    </parent>
+
+
+    <groupId>tech.rsqn.streams</groupId>
     <artifactId>streams-demo</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <url>http://maven.apache.org</url>
+
+    <name>streams-demo</name>
+    <description>Streams demo project streams-comet as the provider.</description>
+    <url>https://github.com/rsqn/streams-demo</url>
+
+    <licenses>
+        <license>
+            <name>GNU General Public License, Version 3.0</name>
+            <url>http://www.gnu.org/licenses/gpl-3.0.html</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Michael Andrewes</name>
+            <email>mandrewes@roguesquadron.com.au</email>
+            <organization>Rogue Squadron Pty Ltd</organization>
+            <organizationUrl>http://www.roguesquadron.com.au</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git@github.com:rsqn/streams-demo.git</connection>
+        <developerConnection>scm:git:git@github.com:rsqn/streams-demo.git</developerConnection>
+        <url>https://github.com/mandrewes/streams-demo</url>
+    </scm>
+
 
 
     <dependencies>
         <dependency>
-            <groupId>com.rsqn.utils</groupId>
+            <groupId>tech.rsqn.utils</groupId>
             <artifactId>jjst</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>1.0.3</version>
         </dependency>
         <dependency>
-            <groupId>com.rsqn.streams</groupId>
+            <groupId>tech.rsqn.streams</groupId>
             <artifactId>streams-server-api</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>1.0.0</version>
         </dependency>
         <dependency>
-            <groupId>com.rsqn.streams</groupId>
+            <groupId>tech.rsqn.streams</groupId>
             <artifactId>streams-server-comet</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-source-plugin</artifactId>
-                <version>3.0.1</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    <showDeprecation>true</showDeprecation>
-                    <showWarnings>true</showWarnings>
-                    <fork>true</fork>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>

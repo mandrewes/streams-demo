@@ -1,9 +1,9 @@
-package com.rsqn.streamsdemo.services;
+package tech.rsqn.streamsdemo.services;
 
 
 import com.rsqn.streams.server.comet.services.AbstractService;
-import com.rsqn.streamsdemo.model.EchoRequest;
-import com.rsqn.streamsdemo.model.EchoResponse;
+import tech.rsqn.streamsdemo.model.EchoRequest;
+import tech.rsqn.streamsdemo.model.EchoResponse;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.cometd.annotation.Listener;
 import org.cometd.annotation.Service;

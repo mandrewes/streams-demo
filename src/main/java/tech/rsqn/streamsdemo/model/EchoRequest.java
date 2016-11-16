@@ -1,4 +1,4 @@
-package com.rsqn.streamsdemo.model;
+package tech.rsqn.streamsdemo.model;
 
 public class EchoRequest {
     private String returnChannel;

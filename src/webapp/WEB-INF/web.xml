@@ -46,7 +46,7 @@
 
     <servlet>
         <servlet-name>jsAggregation</servlet-name>
-        <servlet-class>com.rsqn.utils.jjst.servlets.JavascriptAggregationServlet</servlet-class>
+        <servlet-class>tech.rsqn.utils.jjst.servlets.JavascriptAggregationServlet</servlet-class>
         <async-supported>false</async-supported>
         <init-param>
             <param-name>baseProfiles</param-name>
@@ -60,7 +60,7 @@
 
     <servlet>
         <servlet-name>cssAggregation</servlet-name>
-        <servlet-class>com.rsqn.utils.jjst.servlets.CssAggregationServlet</servlet-class>
+        <servlet-class>tech.rsqn.utils.jjst.servlets.CssAggregationServlet</servlet-class>
         <async-supported>false</async-supported>
         <init-param>
             <param-name>baseProfiles</param-name>
