@@ -5,7 +5,7 @@
     <parent>
         <groupId>tech.rsqn</groupId>
         <artifactId>rsqn-oss-super-pom</artifactId>
-        <version>0.0.4</version>
+        <version>0.0.7</version>
     </parent>
 
 
@@ -44,19 +44,19 @@
 
     <dependencies>
         <dependency>
-            <groupId>tech.rsqn.utils</groupId>
+            <groupId>tech.rsqn</groupId>
             <artifactId>jjst</artifactId>
-            <version>1.0.3</version>
+            <version>1.0.4</version>
         </dependency>
         <dependency>
             <groupId>tech.rsqn.streams</groupId>
             <artifactId>streams-server-api</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.2</version>
         </dependency>
         <dependency>
             <groupId>tech.rsqn.streams</groupId>
             <artifactId>streams-server-comet</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.2</version>
         </dependency>
     </dependencies>
 
