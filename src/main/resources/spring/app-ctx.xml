@@ -17,13 +17,13 @@
     </bean>
 
     <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
-        <property name="targetClass" value="com.rsqn.common.metrics.Metrics"/>
+        <property name="targetClass" value="tech.rsqn.useful.things.metrics.Metrics"/>
         <property name="targetMethod" value="startReporting"/>
     </bean>
 
     <context:annotation-config/>
-    <context:component-scan base-package="com.rsqn.streams"/>
-    <context:component-scan base-package="com.rsqn.streamsdemo"/>
+    <context:component-scan base-package="tech.rsqn.streams"/>
+    <context:component-scan base-package="tech.rsqn.streamsdemo"/>
 
     <import resource="classpath:/spring/services-ctx.xml"/>
 

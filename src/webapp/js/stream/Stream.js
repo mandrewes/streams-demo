@@ -1,6 +1,6 @@
-ns("com.rsqn.streams");
+ns("tech.rsqn.streams");
 
-com.rsqn.streams.Stream = function () {
+tech.rsqn.streams.Stream = function () {
     this.cometd = $.cometd;
     this._connected = false;
     this.sessionToken = "none";
@@ -9,36 +9,36 @@ com.rsqn.streams.Stream = function () {
     this._connectionEstablishedFlag = false;
 };
 
-com.rsqn.streams.Stream.prototype.logger = function (s) {
+tech.rsqn.streams.Stream.prototype.logger = function (s) {
     console.log(s)
 };
 
-com.rsqn.streams.Stream.prototype.isConnected = function () {
+tech.rsqn.streams.Stream.prototype.isConnected = function () {
     return this._connectionEstablishedFlag;
 };
 
-com.rsqn.streams.Stream.prototype.removeConnectionBrokenListener = function (handle) {
+tech.rsqn.streams.Stream.prototype.removeConnectionBrokenListener = function (handle) {
     delete this.connectionBrokenListeners[handle.listenerId];
 };
 
-com.rsqn.streams.Stream.prototype.removeConnectionEstablishedListener = function (handle) {
+tech.rsqn.streams.Stream.prototype.removeConnectionEstablishedListener = function (handle) {
     delete this.connectionEstablishedListeners[handle.listenerId];
 };
 
-com.rsqn.streams.Stream.prototype.connectionClosed = function () {
+tech.rsqn.streams.Stream.prototype.connectionClosed = function () {
     this._connectionEstablishedFlag = false;
 };
 
-com.rsqn.streams.Stream.prototype._ready = function (handshake) {
+tech.rsqn.streams.Stream.prototype._ready = function (handshake) {
     this.ready(handshake);
 };
 
-com.rsqn.streams.Stream.prototype.batch = function (fn) {
+tech.rsqn.streams.Stream.prototype.batch = function (fn) {
     this.cometd.batch(fn);
 };
 
 
-com.rsqn.streams.Stream.prototype.subscribe = function (channel, cb, subCb) {
+tech.rsqn.streams.Stream.prototype.subscribe = function (channel, cb, subCb) {
     var self = this;
     console.log("subscribe on (" + channel + ")");
 
@@ -65,7 +65,7 @@ com.rsqn.streams.Stream.prototype.subscribe = function (channel, cb, subCb) {
 };
 
 
-com.rsqn.streams.Stream.prototype.unsubscribe = function (subscription) {
+tech.rsqn.streams.Stream.prototype.unsubscribe = function (subscription) {
     var self = this;
     if (subscription) {
         console.log("Unsubscribe on (" + subscription + ")");
@@ -73,7 +73,7 @@ com.rsqn.streams.Stream.prototype.unsubscribe = function (subscription) {
     }
 };
 
-com.rsqn.streams.Stream.prototype.publish = function (channel, obj) {
+tech.rsqn.streams.Stream.prototype.publish = function (channel, obj) {
     var self = this;
     this.cometd.publish(channel, obj, {
         ext: {
@@ -82,7 +82,7 @@ com.rsqn.streams.Stream.prototype.publish = function (channel, obj) {
     });
 };
 
-com.rsqn.streams.Stream.prototype.init = function (url, credentials) {
+tech.rsqn.streams.Stream.prototype.init = function (url, credentials) {
     var self = this;
     var cometURL = url;
     self.logger("Connecting to " + cometURL);
@@ -105,7 +105,7 @@ com.rsqn.streams.Stream.prototype.init = function (url, credentials) {
     });
 };
 
-com.rsqn.streams.Stream.prototype._connectionBroken = function () {
+tech.rsqn.streams.Stream.prototype._connectionBroken = function () {
     this.logger('Connection Broken');
     this.tmpConnectionIsEstablished = false;
     for (var key in this.connectionBrokenListeners) {
@@ -116,12 +116,12 @@ com.rsqn.streams.Stream.prototype._connectionBroken = function () {
     }
 };
 
-com.rsqn.streams.Stream.prototype._connectionClosed = function () {
+tech.rsqn.streams.Stream.prototype._connectionClosed = function () {
     this.logger('Connection Closed');
     this.connectionClosed();
 };
 
-com.rsqn.streams.Stream.prototype._metaConnect = function (message) {
+tech.rsqn.streams.Stream.prototype._metaConnect = function (message) {
     var self = this;
     if (this.cometd.isDisconnected()) {
         this._connected = false;
@@ -141,7 +141,7 @@ com.rsqn.streams.Stream.prototype._metaConnect = function (message) {
     }
 };
 
-com.rsqn.streams.Stream.prototype._metaHandshake = function (handshake) {
+tech.rsqn.streams.Stream.prototype._metaHandshake = function (handshake) {
     if (handshake.successful === true) {
         if (handshake["session"]) {
             this.sessionId = handshake["sessionId"];
@@ -155,7 +155,7 @@ com.rsqn.streams.Stream.prototype._metaHandshake = function (handshake) {
 };
 
 
-com.rsqn.streams.Stream.prototype.addConnectionEstablisedListener = function (f) {
+tech.rsqn.streams.Stream.prototype.addConnectionEstablisedListener = function (f) {
     var ret = {
         listenerId: randomString(32),
         fn: f
@@ -166,7 +166,7 @@ com.rsqn.streams.Stream.prototype.addConnectionEstablisedListener = function (f)
     }
 };
 
-com.rsqn.streams.Stream.prototype.addConnectionBrokenListener = function (f) {
+tech.rsqn.streams.Stream.prototype.addConnectionBrokenListener = function (f) {
     var ret = {
         listenerId: randomString(24),
         fn: f
@@ -176,7 +176,7 @@ com.rsqn.streams.Stream.prototype.addConnectionBrokenListener = function (f) {
 };
 
 
-com.rsqn.streams.Stream.prototype._connectionEstablished = function () {
+tech.rsqn.streams.Stream.prototype._connectionEstablished = function () {
     this.logger('Connection Established');
     this._connectionEstablishedFlag = true;
     for (var key in this.connectionEstablishedListeners) {

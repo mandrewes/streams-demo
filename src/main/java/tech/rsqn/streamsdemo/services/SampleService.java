@@ -1,7 +1,7 @@
 package tech.rsqn.streamsdemo.services;
 
 
-import com.rsqn.streams.server.comet.services.AbstractService;
+import tech.rsqn.streams.server.comet.services.AbstractService;
 import tech.rsqn.streamsdemo.model.EchoRequest;
 import tech.rsqn.streamsdemo.model.EchoResponse;
 import org.apache.commons.lang3.builder.ToStringBuilder;

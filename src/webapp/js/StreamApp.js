@@ -1,11 +1,11 @@
-ns("com.rsqn.streamsdemo");
+ns("tech.rsqn.streamsdemo");
 
 #include EchoWidget.js
 
 
-com.rsqn.streamsdemo.StreamApp = function () {
+tech.rsqn.streamsdemo.StreamApp = function () {
     this.myElement = this.parentContainer;
-    this.stream = new com.rsqn.streams.Stream();
+    this.stream = new tech.rsqn.streams.Stream();
 
     // this.stream.logger = function (s) {
     //     $("#log").append("<span class=\"log-entry\">" + (ctr++) + ":<span class=\"log-text\">" + s + "</span></span><br/>");
@@ -14,7 +14,7 @@ com.rsqn.streamsdemo.StreamApp = function () {
     this.credentials = "";
 };
 
-com.rsqn.streamsdemo.StreamApp.prototype.init = function (parentElement) {
+tech.rsqn.streamsdemo.StreamApp.prototype.init = function (parentElement) {
     var self = this;
     self.parentElement = parentElement;
     self.myElement = self.parentElement;
@@ -31,7 +31,7 @@ com.rsqn.streamsdemo.StreamApp.prototype.init = function (parentElement) {
     self.stream.init(_streamConfig.url,self.credentials);
 
     var div = self.myElement.find(".echo-container");
-    new com.rsqn.streamsdemo.EchoWidget().init(self.stream,div);
+    new tech.rsqn.streamsdemo.EchoWidget().init(self.stream,div);
 };
 
 

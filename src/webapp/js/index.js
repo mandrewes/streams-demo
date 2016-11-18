@@ -18,7 +18,7 @@ var _streamConfig = {
 // };
 
 $(document).ready(function() {
-    var app = new com.rsqn.streamsdemo.StreamApp();
+    var app = new tech.rsqn.streamsdemo.StreamApp();
     app.init($(".mainApp"))
 });
 console.log("/index.js ran");

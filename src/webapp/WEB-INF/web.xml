@@ -33,17 +33,6 @@
         <url-pattern>/cometd/*</url-pattern>
     </servlet-mapping>
 
-    <!--<filter>-->
-        <!--<filter-name>cross-origin</filter-name>-->
-        <!--<filter-class>com.rsqn.utils.jjst.filters.DevOnlyCORSFilter</filter-class>-->
-        <!--<async-supported>true</async-supported>-->
-    <!--</filter>-->
-    <!--<filter-mapping>-->
-        <!--<filter-name>cross-origin</filter-name>-->
-        <!--<url-pattern>*</url-pattern>-->
-    <!--</filter-mapping>-->
-
-
     <servlet>
         <servlet-name>jsAggregation</servlet-name>
         <servlet-class>tech.rsqn.utils.jjst.servlets.JavascriptAggregationServlet</servlet-class>
@@ -71,17 +60,5 @@
         <servlet-name>cssAggregation</servlet-name>
         <url-pattern>/css/*</url-pattern>
     </servlet-mapping>
-
-    <!--<servlet>-->
-        <!--<servlet-name>jsSource</servlet-name>-->
-        <!--<servlet-class>com.rsqn.utils.jjst.servlets.JavascriptSourceServlet</servlet-class>-->
-        <!--<async-supported>false</async-supported>-->
-    <!--</servlet>-->
-    <!--<servlet-mapping>-->
-        <!--<servlet-name>jsSource</servlet-name>-->
-        <!--<url-pattern>/source/*</url-pattern>-->
-    <!--</servlet-mapping>-->
-
-
 
 </web-app>

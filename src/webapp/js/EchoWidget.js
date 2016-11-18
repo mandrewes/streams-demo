@@ -1,10 +1,10 @@
-ns("com.rsqn.streamsdemo");
+ns("tech.rsqn.streamsdemo");
 
 
-com.rsqn.streamsdemo.EchoWidget = function () {
+tech.rsqn.streamsdemo.EchoWidget = function () {
 };
 
-com.rsqn.streamsdemo.EchoWidget.prototype.init = function (stream, parentElement) {
+tech.rsqn.streamsdemo.EchoWidget.prototype.init = function (stream, parentElement) {
     var self = this;
     self.stream = stream;
     self.parentElement = parentElement;
@@ -25,8 +25,7 @@ com.rsqn.streamsdemo.EchoWidget.prototype.init = function (stream, parentElement
             }
         );
     };
-    setTimeout(function() {
-        self.echoSubscription = self.stream.subscribe("/service/sample/echo-response", echoListener, onSubscribeListener);
-    }, 1);
+
+    self.echoSubscription = self.stream.subscribe("/service/sample/echo-response", echoListener, onSubscribeListener);
 
 };

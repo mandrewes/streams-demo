@@ -15,7 +15,7 @@
         </property>
     </bean>
 
-    <bean id="jetty" class="com.rsqn.common.EmbeddedJetty" init-method="start">
+    <bean id="jetty" class="tech.rsqn.server.EmbeddedJetty" init-method="start">
         <property name="port" value="${webapp.port}"/>
         <property name="contextPath" value="${webapp.contextPath}"/>
         <property name="appBaseSearchPaths">

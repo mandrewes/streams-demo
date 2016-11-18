@@ -9,7 +9,7 @@
         </layout>
     </appender>
 
-    <logger name="com.rsqn">
+    <logger name="tech.rsqn">
         <level value="DEBUG" />
     </logger>
 

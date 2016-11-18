@@ -8,7 +8,7 @@ What does this do?
 ==================
 
 _The Server_
-- Starts embedded Jetty
+- Starts embedded Jetty on _http://localhost:8080/_
  - _tech.rsqn.streamsdemo.server.ServerMain_ starts up spring/startup-ctx.xml
 - Jetty via _web.xml_ initialises 
  - Services such as Comet dependencies and SampleService via _app-ctx.xml_
@@ -16,8 +16,8 @@ _The Server_
  - Javascript and CSS Aggregation filters from https://github.com/rsqn/jjst
  
  
-_The Client_
-- index.jsp loads up aggregated Javascript from /js/index.js
+_The Client_ 
+- index.jsp loads up aggregated Javascript from _/js/index.js_
  - which Starts up tech.rsqn.streamsdemo.StreamApp
 - StreamApp 
  - Connects to comet via the _tech.rsqn.streams.Stream_ abstraction
