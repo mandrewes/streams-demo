@@ -7,7 +7,7 @@
 <body>
 <div class="mainApp">
     <div class="echo-container">
-        blah - check the console
+        Logs of echo service are in the console
     </div>
 </div>
 </body>

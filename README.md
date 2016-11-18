@@ -4,6 +4,23 @@ This is a demo and template project to demonstrate basic client/server interacti
 Using only event based interactions all the way from client to server can really simplify and accelerate application development in applications
 where there is complex event based activity happening on the server.
 
+
+How do I run this?
+==================
+
+In your IDE 
+```
+java tech.rsqn.streamsdemo.server.ServerMain --env=LOCAL
+```
+
+In your browser
+```
+http://localhost:8080
+```
+
+
+
+
 What does this do?
 ==================
 

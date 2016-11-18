@@ -32,7 +32,6 @@ public class ServerMain {
             GenericXmlApplicationContext ctx = new GenericXmlApplicationContext(getApplicationContextLocations());
             log.info("Launching ApplicationContext " + Arrays.toString(getApplicationContextLocations()));
             ctx.getBean("jetty");
-//            ctx.registerShutdownHook();
             log.info("Graceful exit");
         } finally {
             log.info("Exiting");
