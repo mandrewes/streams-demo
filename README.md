@@ -5,12 +5,18 @@ Using only event based interactions all the way from client to server can really
 where there is complex event based activity happening on the server.
 
 
-How do I run this?
-==================
+How do I run this (demo)?
+=========================
 
-In your IDE 
+In your IDE run the following main class and arguments
 ```
-java tech.rsqn.streamsdemo.server.ServerMain --env=LOCAL
+tech.rsqn.streamsdemo.server.ServerMain --env=LOCAL
+```
+
+or run the maven goal
+
+```
+mvn exec:java
 ```
 
 In your browser
