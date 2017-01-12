@@ -16,6 +16,7 @@ tech.rsqn.streamsdemo.server.ServerMain --env=LOCAL
 or run the maven goal
 
 ```
+mvn clean install
 mvn exec:java
 ```
 
