@@ -46,22 +46,17 @@
         <dependency>
             <groupId>tech.rsqn</groupId>
             <artifactId>jjst</artifactId>
-            <version>1.0.4</version>
+            <version>1.0.5</version>
         </dependency>
         <dependency>
             <groupId>tech.rsqn.streams</groupId>
             <artifactId>streams-server-api</artifactId>
-            <version>1.0.2</version>
+            <version>1.0.5</version>
         </dependency>
         <dependency>
             <groupId>tech.rsqn.streams</groupId>
             <artifactId>streams-server-comet</artifactId>
-            <version>1.0.2</version>
-        </dependency>
-        <dependency>
-            <groupId>tech.rsqn</groupId>
-            <artifactId>useful-things</artifactId>
-            <version>1.0.8</version>
+            <version>1.0.5</version>
         </dependency>
     </dependencies>
 
