@@ -9,9 +9,20 @@ tech.rsqn.streamsdemo.EchoWidget.prototype.init = function (stream, parentElemen
     self.stream = stream;
     self.parentElement = parentElement;
     self.myElement = $("<div></div>");
+    self.logsElement = $("<div></div>");
+
+    self.parentElement.append(self.myElement);
+    self.myElement.append(self.logsElement);
+
+    self.logsElement.addClass("log-area");
+
 
     var echoListener = function (msg) {
-        console.log("Echo Received " + JSON.stringify(msg));
+        var l = $("<p></p>");
+        l.text("Echo Received " + JSON.stringify(msg));
+
+        self.logsElement.append(l);
+        // console.log("Echo Received " + JSON.stringify(msg));
     };
 
     var onSubscribeListener = function (subscriptionData) {

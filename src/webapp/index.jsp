@@ -7,7 +7,10 @@
 <body>
 <div class="mainApp">
     <div class="echo-container">
-        Logs of echo service are in the console
+        Logs should show up below
+    </div>
+    <div class="logs">
+
     </div>
 </div>
 </body>
