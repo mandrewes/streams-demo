@@ -10,7 +10,7 @@
 
     <groupId>tech.rsqn.streams</groupId>
     <artifactId>streams-demo</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>streams-demo</name>
@@ -37,7 +37,7 @@
         <connection>scm:git:git@github.com:rsqn/streams-demo.git</connection>
         <developerConnection>scm:git:git@github.com:rsqn/streams-demo.git</developerConnection>
         <url>https://github.com/mandrewes/streams-demo</url>
-      <tag>streams-demo-1.0.0</tag>
+      <tag>HEAD</tag>
   </scm>
 
 
