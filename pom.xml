@@ -50,11 +50,6 @@
         </dependency>
         <dependency>
             <groupId>tech.rsqn.streams</groupId>
-            <artifactId>streams-server-api</artifactId>
-            <version>1.0.5</version>
-        </dependency>
-        <dependency>
-            <groupId>tech.rsqn.streams</groupId>
             <artifactId>streams-server-comet</artifactId>
             <version>1.0.5</version>
         </dependency>
